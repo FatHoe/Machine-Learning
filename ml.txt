@@ -5,7 +5,11 @@ c. CO2 Emission    Dataset: FuelConsumption_dataset.csv
 Consider both univariate and multivariate cases for these problems. Elaborate gradient descent algorithm and hyper
 parameter tuning for the best result with predefined convergent criteria. Display the hypothesis function and find the 
 accuracy of the linear regression in predicting the correct price.  
- 
+
+
+
+Answer:
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -84,11 +88,18 @@ plt.xlabel("Iterations")
 plt.ylabel("Cost") 
 plt.grid(True) 
 plt.show() 
+
+
+
 2. Perform a non-linear regression algorithm to predict China’s GDP from year 1960 to 2014 from given features. 
 Elaborate gradient descent algorithm and hyper-parameter tuning for the best result with predefined convergent 
 criteria.  
            Dataset: china_gdp.csv 
  
+
+Answers:
+
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -164,10 +175,18 @@ mse = mean_squared_error(y, y_fit)
 r2 = r2_score(y, y_fit) 
 print(f"MSE: {mse:.6f}") 
 print(f"R² Score: {r2:.6f}") 
+
+
+
 3. Perform logistic regression to classify if a patient has a benign tumor or malignant tumor (cancer) based on the 
 features provided. Utilize gradient descent with regularization for hyper-parameter tuning. Also, generate log-loss 
 curve for this problem. 
 Dataset: samples_cancer.csv 
+
+Answers:
+
+
+
 # Import necessary libraries 
 import pandas as pd 
 import numpy as np 
@@ -241,9 +260,22 @@ plt.ylabel("Log-Loss")
 plt.title("Log-Loss Curve for Logistic Regression") 
 plt.legend() 
 plt.show() 
+
+
+
+
+
+
+
 4. Using Decision Tree algorithm, predict which drug among drug X, drug Y and drug C should be given 
 to a patient. Find the accuracy of the decision tree in predicting the correct drug for the patient. 
 Dataset: drug.csv 
+
+
+Answers:
+
+
+
 import pandas as pd 
 from sklearn.model_selection import train_test_split 
 from sklearn.preprocessing import LabelEncoder 
@@ -270,10 +302,21 @@ dtree_y_pred = dtree.fit(X_train, y_train).predict(X_test)
 # Calculate accuracy 
 dtree_acc = accuracy_score(y_test, dtree_y_pred) 
 print(f'Accuracy of Decision Tree Classifier: {dtree_acc * 100:.2f}%') 
+
+
+
+
+
 5. Using KNN algorithm, predict which category a customer belongs to onthe basis ofthe data provided by 
 a telecommunications firm. Find the accuracy of the KNN algorithm in predicting the category of a 
 customer 
 Dataset: teleCust.csv 
+
+
+Answers:
+
+
+
 # Importing Libraries 
 import numpy as np 
 import pandas as pd 
@@ -314,9 +357,20 @@ knn_cm=confusion_matrix(y_test,y_knn_pred)
 knn_cr=classification_report(y_test,y_knn_pred) 
 print('confusion matrix\n' , knn_cm) 
 print('classification report\n', knn_cr) 
+
+
+
+
+
 6. Using Gaussian and Multinomial Naive Bayes algorithms, predict if a person is diabetic or not, based 
 on the features provided. Find accuracy and F1-Scores of both algorithms. Dataset: pima-indians
 diabetes.data.csv 
+
+
+Answers:
+
+
+
 # Importing Libraries 
 import numpy as np 
 import pandas as pd 
@@ -357,6 +411,11 @@ mnb_f1 = f1_score(y_test, y_pred)
 print("Multinomial Naive Bayes:") 
 print("Accuracy:", round(mnb_accuracy*100, 2)) 
 print("F1-score:", round(mnb_f1*100, 2)) 
+
+
+
+
+
 7. Using SVM algorithm, predict if a patient has a benign tumor or malignant tumor (cancer) based on the features provided. 
 Use the following kernel for the SVM algorithm: 
 a) Linear  
@@ -371,6 +430,12 @@ Find the following metrics for each of the SVM algorithms:
 7) Confusion Matrix 
 Compare all four SVM models using an ROC curve. 
 Dataset: samples_cancer.csv 
+
+
+
+Answers:
+
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -456,35 +521,6 @@ for kernel in results:
     plt.show() 
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 # Step 7: Plot ROC Curve 
 plt.figure(figsize=(10, 6)) 
 for kernel in kernels: 
@@ -498,10 +534,26 @@ plt.legend()
 plt.grid(True) 
 plt.tight_layout() 
 plt.show() 
+
+
+
+
+
+
+
+
 8. Applying SVM, Naive Bayes, Decision tree and KNN predict diabetes based on features set. Compare the four 
 classification algorithms with performance metrics such as accuracy, recall, precision, F1- score. Also design the 
 heat map confusion matrix for above algorithms and construct ROC curve for comparison.  
 Dataset: pima-indians-diabetes.data.csv 
+
+
+
+Answers:
+
+
+
+
 # Step 1: Import libraries 
 import pandas as pd 
 import numpy as np 
@@ -591,8 +643,24 @@ plt.ylabel("True Positive Rate")
 plt.legend() 
 plt.grid(True) 
 plt.show() 
+
+
+
+
+
+
+
+
 9. Design and train the neural network that computes the functionality of XOR function. 
  
+
+
+Answers:
+
+
+
+
+
 # Step 1: Import libraries 
 import numpy as np 
 from tensorflow.keras.models import Sequential 
@@ -623,11 +691,26 @@ for i in range(len(X)):
     print(f"Input: {X[i]} -> Predicted Output: {int(predictions[i][0])}") 
  
  
+
+
+
+
+
 10. Perform Multilayer perception neural network to classify flower type. Utilize number of hidden layer 5 and 200 to 400 
 iteration with learning rate. Try with different loss functions/ activation functions such as MSE, Cross entropy, sigmoid, tanh, 
 ReLU along with different optimizer GD, SGD, Adam. Illustrate the result with performance metrics and observe Weight, 
 Loss curve and accuracy curve. 
 Dataset: Iris dataset 
+
+
+
+Answers:
+
+
+
+
+
+
 # Step 1: Import required libraries 
 import numpy as np 
 import pandas as pd 
@@ -717,10 +800,24 @@ print(f"\n
     
 Final Test Accuracy: {accuracy*100:.2f}% | Loss: {loss:.4f}") 
 Final Test Accuracy: 100.00% | Loss: 0.0000 
+
+
+
+
+
+
+
+
 11. Perform k- means clustering algorithm for customer segmentation from given features. Utilize 
 Euclidean distance and Manhattan distance for this problem. Also, plot in terms of 2D and 3D clusters 
 this problem. 
 Dataset: Customer segmentation dataset 
+
+Answers
+
+
+
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -785,11 +882,27 @@ ax.set_xlabel("PC1")
 ax.set_ylabel("PC2") 
 ax.set_zlabel("PC3") 
 plt.show() 
+
+
+
+
+
+
+
+
+
 12. Perform hierarchical clustering such as Agglomerative algorithm and Divisive algorithm to group 
 several vehicles. Utilize single, complete and average linkage to define the cluster. Also draw the 
 dendogram for this problem. 
     Dataset: Vehicle dataset 
  
+
+Answers:
+
+
+
+
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
